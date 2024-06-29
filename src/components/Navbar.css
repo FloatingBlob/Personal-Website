@@ -1,0 +1,35 @@
+nav {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  background-color: #ffffff;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav a {
+  display: flex;
+}
+
+nav li:last-child {
+  margin-left: auto;
+}
+
+img {
+  width: 10vw;
+  max-width: 200px;
+  min-width: 100px;
+  height: auto;
+}
+
+button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
