@@ -6,3 +6,19 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+
+:root {
+  --background: #101010;
+  --text: #ffffff;
+  --primary: #d4af37;
+  --secondary: #2E1F11;
+  --accent: #5D3E1E;
+}
+
+[theme="light"] {
+  --background: #f0f0f0;
+  --text: #000000;
+  --primary: #caa52b;
+  --secondary: #eee0d2;
+  --accent: #e1c2a3;
+}

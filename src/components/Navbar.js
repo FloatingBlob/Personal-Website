@@ -1,21 +1,9 @@
 import React from "react";
 import Icon from "../assets/icon.png";
-import { RxSun, RxMoon } from "react-icons/rx";
-import { Button } from "react-bootstrap";
 import "./Navbar.css";
+import Toggle from "./Toggle.js";
 
-export default function NavBar (props) {
-    function changeTheme() {
-        if (props.theme === "dark") {
-            props.setTheme("light");
-        } 
-        else {
-            props.setTheme("dark");
-        }
-    };
-
-    const mode = props.theme === "dark" ? <RxMoon size={40} /> : <RxSun size = {40} />;
-
+export default function NavBar ({ setDarkMode, darkMode }) {
     return (
         <nav>
             <ul>
@@ -25,9 +13,7 @@ export default function NavBar (props) {
                     </a>
                 </li>
                 <li>
-                    <Button onClick={changeTheme}>
-                        {mode}
-                    </Button>
+                    <Toggle setDarkMode={setDarkMode} darkMode={darkMode} />
                 </li>
             </ul>
         </nav>

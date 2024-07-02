@@ -2,7 +2,6 @@ nav {
   position: absolute;
   width: 100%;
   z-index: 100;
-  background-color: #ffffff;
 }
 
 nav ul {
@@ -26,10 +25,4 @@ img {
   max-width: 200px;
   min-width: 100px;
   height: auto;
-}
-
-button {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
 }

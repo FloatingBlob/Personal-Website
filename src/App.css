@@ -9,10 +9,10 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1e1e1e;
+  background-color: var(--background);
   scroll-snap-align: start;
 }
 
 h1 {
-  color: #ffffff;
+  color: var(--text);
 }

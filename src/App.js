@@ -1,35 +1,18 @@
 import React from "react";
-import { useState } from "react";
-import { ThemeProvider } from "react-bootstrap";
 import "./App.css";
 import Main from "./components/home/dawn.js"
 import NavBar from "./components/Navbar.js";
-
-const LightTheme = {
-    pageBackground: "#f0f0f0",
-    titleColor: "#000000",
-    tagLineColor: "#caa52b"
-}
-
-const DarkTheme = {
-    pageBackground: "#101010",
-    titleColor: "#ffffff",
-    tagLineColor: "#d4af37"
-}
-
-const themes = {
-    light: LightTheme,
-    dark: DarkTheme
-}
+import { useLocalStorage } from 'react-use';
 
 function App() {
-    const [theme, setTheme] = useState("dark")
+    const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const [darkMode, setdarkMode] = useLocalStorage("darkMode", preference);
 
     return (
-        <ThemeProvider theme={themes[theme]}>
-	        <NavBar theme={theme} setTheme={setTheme} />
-            <Main theme={theme} />
-        </ThemeProvider>
+        <div theme={darkMode ? "dark" : "light"}>
+	        <NavBar setDarkMode={setdarkMode} darkMode={darkMode} />
+            <Main />
+        </div>
     );
 }
 
