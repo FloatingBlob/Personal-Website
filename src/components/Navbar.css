@@ -8,16 +8,32 @@ nav ul {
   width: 100%;
   list-style: none;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
 }
 
-nav a {
-  display: flex;
+svg {
+  cursor: pointer;
+  color: var(--text);
+  
+  width: 3vw;
+  max-width: 75px;
+  min-width: 40px;
+  height: auto;
 }
 
-nav li:last-child {
-  margin-left: auto;
+.links {
+  max-width: 100px;
+  height: auto;
+}
+
+nav li {
+  display: flex;
+  padding: 0 40px 0 0;
+}
+
+nav li:first-child {
+  margin-right: auto;
 }
 
 img {
