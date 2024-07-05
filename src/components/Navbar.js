@@ -14,13 +14,17 @@ export default function NavBar ({ setDarkMode, darkMode }) {
                     </a>
                 </li>
                 <li>
-                    <SiSpotify className="links"/>
+                    <a href="https://open.spotify.com/user/36n2d2ubsuni1jrat4kuxrk70" target="_blank" rel="noopener noreferrer" > 
+                        <SiSpotify  />
+                    </a>
                 </li>
-                <li> 
-                    <SiSteam className="links"/>
+                <li >
+                    <a href="https://steamcommunity.com/id/Floto/" target="_blank" rel="noopener noreferrer" > 
+                        <SiSteam  />
+                    </a>
                 </li>
                 <li>
-                    <Toggle setDarkMode={setDarkMode} darkMode={darkMode} className="links" />
+                    <Toggle setDarkMode={setDarkMode} darkMode={darkMode} />
                 </li>
             </ul>
         </nav>
