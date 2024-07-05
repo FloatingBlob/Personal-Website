@@ -5,7 +5,7 @@ export default function Main() {
     return (
         <div className="container">
             <section>
-                <h1> First Page</h1>
+                <h1>First Page</h1>
             </section>
             
             <section>

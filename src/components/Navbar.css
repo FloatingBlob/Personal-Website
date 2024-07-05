@@ -12,21 +12,6 @@ nav ul {
   align-items: center;
 }
 
-svg {
-  cursor: pointer;
-  color: var(--text);
-
-  width: 2vw;
-  max-width: 40px;
-  min-width: 25px;
-  height: auto;
-}
-
-.links {
-  max-width: 100px;
-  height: auto;
-}
-
 nav li {
   padding: 0 40px 0 0;
 }
@@ -37,6 +22,16 @@ nav a {
 
 nav li:first-child {
   margin-right: auto;
+}
+
+svg {
+  cursor: pointer;
+  color: var(--text);
+
+  width: 2vw;
+  max-width: 40px;
+  min-width: 25px;
+  height: auto;
 }
 
 img {
