@@ -1,24 +1,25 @@
 import React from "react";
 import "./dawn.css";
+import zena from"../../assets/zena.png"
 
-export default function Main() {
+export default function Home() {
     return (
-        <div className="container">
-            <section>
-                <h1>First Page</h1>
-            </section>
-            
-            <section>
-                <h1>Second Page</h1>
-            </section>
-
-            <section>
-                <h1>Third Page</h1>
-            </section>
-
-            <section>
-                <h1>Fourth Page</h1>
-            </section>
-        </div>
+        <div className="row">
+            <div className="right">
+                <img src={zena} alt="zena and claw"></img>
+            </div>
+            <div className="left">
+                <div className="content">
+                    <p>Hello</p>
+                    <p>Welcome to my website.</p>
+                    <br></br>
+                    <p>You've <span className="highlight">returned.</span></p>
+                    <br></br>
+                    <p>I'm <span className="highlight">Laziness</span></p>
+                    <p>Also known as...</p>
+                    <p>Unlazy</p>
+                </div>
+            </div>
+        </div> 
     );
 }

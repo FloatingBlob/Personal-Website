@@ -1,8 +1,11 @@
 import React from "react";
 import "./App.css";
-import Main from "./components/home/dawn.js"
-import NavBar from "./components/Navbar.js";
 import { useLocalStorage } from 'react-use';
+import NavBar from "./components/Navbar.js";
+import Home from "./components/home/dawn.js"
+import About from "./components/about/noon.js";
+import Achievements from "./components/achievements/dusk.js";
+import Other from "./components/other/midnight.js";
 
 function App() {
     const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -11,7 +14,12 @@ function App() {
     return (
         <div theme={darkMode ? "dark" : "light"}>
 	        <NavBar setDarkMode={setdarkMode} darkMode={darkMode} />
-            <Main />
+            <div className="container">
+                <section><Home /></section>
+                <section><About /></section>
+                <section><Achievements /></section>
+                <section><Other /></section>
+            </div>
         </div>
     );
 }
