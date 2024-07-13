@@ -34,7 +34,7 @@ svg {
   height: auto;
 }
 
-img {
+.icon {
   width: 10vw;
   max-width: 200px;
   min-width: 100px;

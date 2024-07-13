@@ -16,9 +16,8 @@
 
 section {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   background-color: var(--background);
   scroll-snap-align: start;
   transition: all 0.5s ease;

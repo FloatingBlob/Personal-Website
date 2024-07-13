@@ -10,7 +10,7 @@ export default function NavBar ({ setDarkMode, darkMode }) {
             <ul>
                 <li>
                     <a href="/">
-                        <img src={Icon} alt="Floor of philosophy icon" />
+                        <img src={Icon} className="icon" alt="Floor of philosophy icon" />
                     </a>
                 </li>
                 <li>
