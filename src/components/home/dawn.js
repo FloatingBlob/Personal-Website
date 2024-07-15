@@ -8,8 +8,8 @@ export default function Home() {
         <div className="row">
             <div className="left">
                 <div className="content">
-                    <p>Greetings,</p>
-                    <p>welcome to my website</p>
+                    <p>Greetings.</p>
+                    <p>Welcome to my website</p>
                     <br></br>
                     <p>You've <span className="highlight">returned</span>.</p>
                     <p className="indent-text">I'm <span className="highlight">Laziness</span></p>
