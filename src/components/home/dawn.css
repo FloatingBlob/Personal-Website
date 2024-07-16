@@ -2,7 +2,7 @@
   color: var(--primary);
 }
 
-.row {
+.home {
   display: grid;
   width: 80%;
   height: 80%;
@@ -10,7 +10,7 @@
   align-items: center;
 }
 
-.row .left {
+.home .left {
   display: flex;
   justify-content: flex-start;
   font-size: clamp(33px, 3.5vw, 75px);
@@ -23,7 +23,7 @@
   padding-left: 2.5vw;
 }
 
-.row .right {
+.home .right {
   display: flex;
   justify-content: center;
 }
@@ -36,13 +36,14 @@
 }
 
 @media (max-width: 768px) {
-  .row {
+  .home {
     width: 95%;
     height: 90%;
     grid-template-columns: 1fr;
     transform: translateY(2.5%);
   }
-  .row .left {
+
+  .home .left {
     text-align: center;
     justify-content: center;
   }

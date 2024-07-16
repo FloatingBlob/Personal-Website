@@ -1,3 +1,56 @@
 .highlight {
   color: var(--primary);
 }
+
+.about {
+  display: grid;
+  width: 80%;
+  height: 80%;
+  grid-template-columns: 45% 55%;
+  align-items: center;
+}
+
+.about .left {
+  display: flex;
+}
+
+.ihwa {
+  width: 30vw;
+  max-width: 600px;
+  min-width: 275px;
+  height: auto;
+}
+
+.about .right {
+  display: flex;
+  justify-content: center;
+  font-size: clamp(33px, 3.5vw, 75px);
+  line-height: 100%;
+  color: var(--text);
+  transition: all 0.5s ease;
+}
+
+.indent-text {
+  padding-left: 2.5vw;
+}
+
+@media (max-width: 768px) {
+  .about {
+    width: 95%;
+    height: 90%;
+    grid-template-columns: 1fr;
+    transform: translateY(2.5%);
+  }
+
+  .about .left {
+    justify-content: center;
+  }
+
+  .about .right {
+    text-align: center;
+  }
+
+  .indent-text {
+    padding-left: 0;
+  }
+}

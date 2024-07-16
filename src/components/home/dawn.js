@@ -5,9 +5,9 @@ import Type from "./type";
 
 export default function Home() {
     return (
-        <div className="row">
+        <div className="home">
             <div className="left">
-                <div className="content">
+                <div>
                     <p>Greetings.</p>
                     <p>Welcome to my website</p>
                     <br></br>
