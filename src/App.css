@@ -20,10 +20,8 @@ section {
   place-items: center;
   background-color: var(--background);
   scroll-snap-align: start;
-  transition: all 0.5s ease;
 }
 
 h1 {
   color: var(--text);
-  transition: all 0.5s ease;
 }
