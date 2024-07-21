@@ -1,12 +1,8 @@
-.highlight {
-  color: var(--primary);
-}
-
 .home {
   display: grid;
   width: 80%;
   height: 80%;
-  grid-template-columns: 55% 35% 10%;
+  grid-template-columns: 57.5% 37.5% 5%;
   align-items: center;
 }
 
@@ -17,18 +13,14 @@
   color: var(--text);
 }
 
-.indent-text {
-  padding-left: 2.5vw;
-}
-
 .home .right {
   display: flex;
   justify-content: center;
 }
 
 .zena {
-  max-width: 600px;
-  min-width: 275px;
+  max-width: 500px;
+  min-width: 225px;
 }
 
 @media (max-width: 768px) {
@@ -49,6 +41,7 @@
   }
 
   .zena {
-    width: 50%;
+    width: 45%;
+    min-width: 300px;
   }
 }

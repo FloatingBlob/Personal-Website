@@ -25,3 +25,11 @@ section {
 h1 {
   color: var(--text);
 }
+
+.highlight {
+  color: var(--primary);
+}
+
+.indent-text {
+  padding-left: 2.5vw;
+}
