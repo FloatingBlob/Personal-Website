@@ -1,0 +1,21 @@
+.achievements {
+  display: grid;
+  width: 80%;
+  height: 80%;
+  grid-template-columns: 95% 5%;
+  align-items: center;
+}
+
+.achievements .container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5vw;
+  background-color: var(--secondary);
+  height: 100%;
+}
+
+.part {
+  background-color: var(--accent);
+  border-radius: 5%;
+}

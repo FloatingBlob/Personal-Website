@@ -26,6 +26,7 @@
   font-size: var(--content);
   line-height: 100%;
   color: var(--text);
+  padding-left: 5%;
 }
 
 @media (max-width: 768px) {
@@ -48,6 +49,7 @@
   .about .right {
     text-align: center;
     justify-content: center;
+    padding-left: 0;
   }
 
   .indent-text {
