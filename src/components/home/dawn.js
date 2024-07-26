@@ -1,6 +1,6 @@
 import React from "react";
 import "./dawn.css";
-import zena from"../../assets/zena.png"
+import zena from"../../assets/zena.png";
 import Type from "./type";
 
 export default function Home() {

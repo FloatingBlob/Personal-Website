@@ -1,6 +1,6 @@
 import React from "react";
 import "./noon.css";
-import ihwa from"../../assets/ihwa.png"
+import ihwa from"../../assets/ihwa.png";
 
 export default function About() {
     return(

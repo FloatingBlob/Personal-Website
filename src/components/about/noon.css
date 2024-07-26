@@ -34,7 +34,7 @@
     width: 95%;
     height: 90%;
     grid-template-columns: 1fr;
-    transform: translateY(2.5%);
+    transform: translateY(3%);
   }
 
   .about .left {
