@@ -1,0 +1,33 @@
+.other {
+  display: grid;
+  width: 80%;
+  height: 80%;
+  grid-template-columns: 57.5% 37.5% 5%;
+  align-items: center;
+}
+
+.other .left {
+  display: flex;
+  font-size: var(--content);
+  line-height: 100%;
+  color: var(--text);
+}
+
+.other .right {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .other {
+    width: 95%;
+    height: 90%;
+    grid-template-columns: 1fr;
+    transform: translateY(3%);
+  }
+
+  .other .left {
+    text-align: center;
+    justify-content: center;
+  }
+}

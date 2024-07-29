@@ -22,8 +22,8 @@ section {
   scroll-snap-align: start;
 }
 
-h1 {
-  color: var(--text);
+.title {
+  font-size: var(--title);
 }
 
 .highlight {
