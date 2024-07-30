@@ -1,16 +1,37 @@
+import React from "react";
+import "./quotes.css";
+
 const quotes = [
     "It was good, though. Exquisite, even. No wonder humans used to eat them...",
     "From break and ruin, the most beautiful performance begins.",
-    "Hesitation is defeat.",
     "May your woes be many, and your days few.",
-    "W E L C O M E  T O  B L A C K  S P A C E"
+    "Hesitation is defeat.",
+    "YOU HAVE BEEN LIVING HERE FOR AS LONG AS YOU CAN REMEMBER . ."
 ];
 
-/* Note: 
-Make it so that after a refresh of the page, a random quote is placed here out of a selection.
-Current solution:
-- generate a number between 1 to 100 (so 100 different possible numbers)
-- if the number falls in the range 1-96 split equally 4 way for the first 4 quotes
-- if the nubmer falls in the range 97-100 show black space
-- have each of the quotes have different fronts each from their specific game
-*/
+const fonts = [
+    "nier automata",
+    "lobotomy corporation",
+    "ultrakill",
+    "sekiro",
+    "omori",
+];
+
+function getRandomQuote() {
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    if (randomNumber <= 24) return { quote: quotes[0], font: fonts[0] };
+    if (randomNumber <= 48) return { quote: quotes[1], font: fonts[1] };
+    if (randomNumber <= 72) return { quote: quotes[2], font: fonts[2] };
+    if (randomNumber <= 96) return { quote: quotes[3], font: fonts[3] };
+    return { quote: quotes[4], font: fonts[4] };
+}
+
+export default function Quotes() {
+    const { quote, font } = getRandomQuote();
+
+    return (
+        <div style={{ fontFamily: font }}>
+            &ldquo;{quote}&rdquo;
+        </div>
+    );
+}

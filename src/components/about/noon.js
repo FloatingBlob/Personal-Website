@@ -1,6 +1,7 @@
 import React from "react";
 import "./noon.css";
 import ihwa from"../../assets/ihwa.png";
+import Quotes from "./quotes";
 
 export default function About() {
     return(
@@ -21,9 +22,7 @@ export default function About() {
                     <p className="indent-text">- Lord of <span className="highlight">Toast</span></p>
                     <br></br>
                     <p>Favourite Quote:</p> 
-                    <p className="indent-text">It was good, though. Exquisite, even. No wonder humans used to eat them...</p>
-                    <br></br>
-                    <p>1-0 Mackerel</p>
+                    <p className="indent-text"><Quotes /></p>
                 </div>
             </div>
         </div> 
