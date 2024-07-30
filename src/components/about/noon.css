@@ -11,7 +11,7 @@
   justify-content: start;
 }
 
-.ihwa {
+.about-img {
   max-width: 500px;
   min-width: 225px;
 }
@@ -37,7 +37,7 @@
     justify-content: center;
   }
 
-  .ihwa {
+  .about-img {
     width: 45%;
     min-width: 300px;
   }

@@ -5,7 +5,7 @@ import { RxSun, RxMoon } from "react-icons/rx";
 export default function Toggle({ setDarkMode, darkMode }) {
     return (
         <button onClick={() => setDarkMode(!darkMode)}>
-            {darkMode ? <RxSun className="icon-theme" /> : <RxMoon className="icon-theme" />}
+            {darkMode ? <RxSun /> : <RxMoon />}
         </button>
     );
 }

@@ -1,13 +1,14 @@
 import React from "react";
 import "./noon.css";
 import ihwa from"../../assets/ihwa.png";
+import bocchi from"../../assets/bocchizilla.png";
 import Quotes from "./quotes";
 
-export default function About() {
+export default function About({ darkMode }) {
     return(
         <div className="about">
             <div className="left">
-                <img src={ihwa} className="ihwa" alt="ihwa" />
+                <img src={darkMode ? ihwa : bocchi} className="about-img" alt={darkMode ? "ihwa" : "bocchizilla"}/>
             </div>
             <div className="right">
                 <div>

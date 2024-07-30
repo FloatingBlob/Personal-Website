@@ -8,15 +8,6 @@ const strings = [
   "Lazine"
 ];
 
-const options = {
-  strings,
-  autoStart: true,
-  loop: true,
-  deleteSpeed: 50,
-};
-
-const Type = () => {
-  return <Typewriter options={options} />;
-};
-
-export default Type;
+export default function Type() {
+  return <Typewriter options={{ strings, autoStart: true, loop: true, deleteSpeed: 50 }} />;
+}

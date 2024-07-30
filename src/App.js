@@ -15,8 +15,8 @@ function App() {
         <div theme={darkMode ? "dark" : "light"}>
 	        <NavBar setDarkMode={setdarkMode} darkMode={darkMode} />
             <div className="container">
-                <section><Home /></section>
-                <section><About /></section>
+                <section><Home darkMode={darkMode} /></section>
+                <section><About darkMode={darkMode} /></section>
                 <section><Achievements /></section>
                 <section><Other /></section>
             </div>

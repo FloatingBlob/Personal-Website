@@ -1,9 +1,10 @@
 import React from "react";
 import "./dawn.css";
 import zena from"../../assets/zena.png";
+import nier from"../../assets/nier.png";
 import Type from "./type";
 
-export default function Home() {
+export default function Home({ darkMode }) {
     return (
         <div className="home">
             <div className="left">
@@ -21,7 +22,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="right">
-                <img src={zena} className="zena" alt="zena and claw" />
+                <img src={darkMode ? zena : nier} className="home-img" alt={darkMode ? "zena and claw" : "2b on boar"}/>
             </div>
         </div> 
     );
