@@ -9,4 +9,4 @@ To do list:
     - metallic rouge, cruella, that one up and down thing
 - website descriptions when sending as link
 - penis eek music (mutable)
-- speedrun timer and section button
+- speedrun timer (no longer counts up)

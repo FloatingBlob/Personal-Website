@@ -27,12 +27,12 @@
   height: 30px;
   border-radius: 30px;
   background: var(--accent);
-  opacity: 0.75;
+  opacity: 0.9;
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {
   height: 60px;
-  background: var(--secondary);
+  background: var(--primary);
 }
 
 .title {
