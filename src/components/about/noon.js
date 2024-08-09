@@ -14,13 +14,15 @@ export default function About({ darkMode }) {
                 <div>
                     <p className="title">More <span className="highlight">about</span> me</p>
                     <br></br>
-                    <p>My name is <span className="highlight">Joe</span> and I'm <span className="highlight">78</span> years old.</p>
+                    <p>My name is <span className="highlight">Job</span> and I'm <span className="highlight">78</span> years old.</p>
                     <p>I live in <span className="highlight">Djibouti City</span> located in <span className="highlight">Djibouti</span>.</p>
                     <br></br>
+                    <p>Hey girl are you africa?</p>
+                    <p>Because Djibouti is making me crazy.</p>
+                    <br></br>
                     <p>I like to think of myself as:</p>
-                    <p className="indent-text">- An <span className="highlight">indie</span> video game enjoyer</p>
                     <p className="indent-text">- A <del>good</del> programmer</p>
-                    <p className="indent-text">- Lord of <span className="highlight">Toast</span></p>
+                    <p className="indent-text">- King of <span className="highlight">Nothing</span></p>
                     <br></br>
                     <p>Favourite Quote:</p> 
                     <p className="indent-text"><Quotes /></p>

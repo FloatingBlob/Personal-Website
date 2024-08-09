@@ -10,3 +10,4 @@ To do list:
 - website descriptions when sending as link
 - penis eek music (mutable)
 - speedrun timer (no longer counts up)
+- djbouti voice over
