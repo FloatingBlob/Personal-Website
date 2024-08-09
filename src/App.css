@@ -1,11 +1,11 @@
 .swiper {
   height: 100vh;
+  background: var(--background);
 }
 
 .swiper-slide {
   display: grid;
   place-items: center;
-  background-color: var(--background);
 }
 
 .swiper-pagination {

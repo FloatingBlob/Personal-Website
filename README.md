@@ -8,3 +8,5 @@ To do list:
 - look into animations e.g the text coming from the left and right
     - metallic rouge, cruella, that one up and down thing
 - website descriptions when sending as link
+- penis eek music (mutable)
+- speedrun timer and section button

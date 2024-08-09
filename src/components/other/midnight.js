@@ -7,7 +7,7 @@ export default function Other() {
          <div className="other">
             <div className="left">
                 <div>
-                    <p className="title"><span className="highlight">Fun</span> fact</p>
+                    <p className="title"><span className="highlight"><s>Fun</s></span> sad fact</p>
                     <br></br>
                     <p>When a coin is tossed,</p>
                     <p><span className="highlight">50%</span> of the time, it will land on heads,</p>

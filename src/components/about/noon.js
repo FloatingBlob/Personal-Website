@@ -17,7 +17,7 @@ export default function About({ darkMode }) {
                     <p>My name is <span className="highlight">Joe</span> and I'm <span className="highlight">78</span> years old.</p>
                     <p>I live in <span className="highlight">Djibouti City</span> located in <span className="highlight">Djibouti</span>.</p>
                     <br></br>
-                    <p>I like to think myself as:</p>
+                    <p>I like to think of myself as:</p>
                     <p className="indent-text">- An <span className="highlight">indie</span> video game enjoyer</p>
                     <p className="indent-text">- A <del>good</del> programmer</p>
                     <p className="indent-text">- Lord of <span className="highlight">Toast</span></p>
