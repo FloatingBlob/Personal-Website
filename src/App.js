@@ -1,6 +1,9 @@
 import React from "react";
+import "swiper/css";
 import "./App.css";
-import { useLocalStorage } from 'react-use';
+import { useLocalStorage } from "react-use";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Mousewheel, Pagination, Navigation, HashNavigation } from "swiper/modules";
 import NavBar from "./components/Navbar.js";
 import Home from "./components/home/dawn.js"
 import About from "./components/about/noon.js";
@@ -13,13 +16,21 @@ function App() {
 
     return (
         <div theme={darkMode ? "dark" : "light"}>
-	        <NavBar setDarkMode={setdarkMode} darkMode={darkMode} />
-            <div className="container">
-                <section><Home darkMode={darkMode} /></section>
-                <section><About darkMode={darkMode} /></section>
-                <section><Achievements /></section>
-                <section><Other /></section>
-            </div>
+            <NavBar setDarkMode={setdarkMode} darkMode={darkMode} />
+            
+            <Swiper 
+                direction={"vertical"} 
+                slidesPerView={1} 
+                mousewheel={true} 
+                hashNavigation={{watchState: true}}
+                pagination={{clickable: true}} 
+                modules={[Mousewheel, Pagination, Navigation, HashNavigation]}
+            >
+                <SwiperSlide data-hash="dawn"><Home darkMode={darkMode} /></SwiperSlide>
+                <SwiperSlide data-hash="noon"><About darkMode={darkMode} /></SwiperSlide>
+                <SwiperSlide data-hash="dusk"><Achievements /></SwiperSlide>
+                <SwiperSlide data-hash="midnight"><Other /></SwiperSlide>
+            </Swiper>
         </div>
     );
 }

@@ -1,25 +1,38 @@
-.container {
+.swiper {
   height: 100vh;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  ::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Hide scrollbar for IE, Edge, and Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 }
 
-section {
+.swiper-slide {
   display: grid;
-  height: 100vh;
   place-items: center;
   background-color: var(--background);
-  scroll-snap-align: start;
+}
+
+.swiper-pagination {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate3d(0px, -50%, 0);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {
+  display: block;
+  margin: 10px 0;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background: var(--accent);
+  opacity: 0.75;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  height: 60px;
+  background: var(--secondary);
 }
 
 .title {
