@@ -4,7 +4,7 @@ import "./App.css";
 import { useLocalStorage } from "react-use";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination, Navigation, HashNavigation } from "swiper/modules";
-import NavBar from "./components/Navbar.js";
+import NavBar from "./components/navbar/Navbar.js";
 import Home from "./components/home/dawn.js"
 import About from "./components/about/noon.js";
 import Achievements from "./components/achievements/dusk.js";

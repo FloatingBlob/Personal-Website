@@ -1,24 +1,29 @@
 @font-face {
-    font-family: "nier automata";
-    src: url("../../assets/fonts/FOT-RodinProN-M.otf") format("opentype");
+  font-family: "nier automata";
+  src: url("../../assets/fonts/FOT-RodinProN-M.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "lobotomy corporation";
-    src: url("../../assets/fonts/gill-sans-mt.ttf") format("truetype");
+  font-family: "lobotomy corporation";
+  src: url("../../assets/fonts/gill-sans-mt.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "ultrakill";
-    src: url("../../assets/fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
+  font-family: "ultrakill";
+  src: url("../../assets/fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "sekiro";
-    src: url("../../assets/fonts/NotoSerifJP-Regular.ttf") format("truetype");
+  font-family: "sekiro";
+  src: url("../../assets/fonts/NotoSerifJP-Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "omori";
-    src: url("../../assets/fonts/OMORI_GAME2.ttf") format("truetype");
+  font-family: "library of ruina";
+  src: url("../../assets/fonts/NanumMyeongjo.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "omori";
+  src: url("../../assets/fonts/OMORI_GAME2.ttf") format("truetype");
 }

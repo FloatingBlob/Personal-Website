@@ -2,10 +2,12 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 
 const strings = [
-  "Floto",
-  "ItsLazi",
-  "Unlazy",
-  "Lazine"
+  "not jobless",
+  "mr beast",
+  "pathological liar",
+  "dog lover",
+  "chronic gooner",
+  "nonchalant rice-eater"
 ];
 
 export default function Type() {

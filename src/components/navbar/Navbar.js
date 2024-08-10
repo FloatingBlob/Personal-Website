@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { SiSpotify, SiSteam } from "react-icons/si";
-import Icon from "../assets/icon.png";
+import Icon from "../../assets/icon.png";
 import Toggle from "./Toggle.js";
 
 export default function NavBar ({ setDarkMode, darkMode }) {

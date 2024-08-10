@@ -2,7 +2,6 @@ random project
 looks pretty cool tho
 
 To do list:
-- look into creating horizontal scroll dots for the slides
 - create a seperate sub page for all the references in the website
 - look into jumpscare when button
 - look into animations e.g the text coming from the left and right
@@ -11,3 +10,4 @@ To do list:
 - penis eek music (mutable)
 - speedrun timer (no longer counts up)
 - djbouti voice over
+- look into creating horizontal some sort of indicator for mobile slides

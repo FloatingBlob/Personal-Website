@@ -9,19 +9,19 @@ import thumbsup from"../../assets/thumbsup.png";
 
 export default function Achievements() {
     useEffect(() => {
-        const cards = document.querySelectorAll('.box .card');
+        const cards = document.querySelectorAll(".box .card");
         
         const tap = (event) => {
-            event.currentTarget.classList.toggle('is-flipped');
+            event.currentTarget.classList.toggle("is-flipped");
         };
 
         cards.forEach(card => {
-            card.addEventListener('click', tap);
+            card.addEventListener("click", tap);
         });
 
         return () => {
             cards.forEach(card => {
-                card.removeEventListener('click', tap);
+                card.removeEventListener("click", tap);
             });
         };
     }, []);
