@@ -16,6 +16,7 @@ export default function Other() {
                     <br></br>
                     <p>That's why <span className="highlight">heads</span> is more commonly picked in a coin flip.</p>
                     <br></br>
+                    <p>(images and their artists <a href="/references.html" target="_blank" rel="noopener noreferrer">here</a>)</p>
                 </div>
             </div>
             <div className="right">
