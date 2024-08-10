@@ -9,6 +9,7 @@ import Home from "./components/home/dawn.js"
 import About from "./components/about/noon.js";
 import Achievements from "./components/achievements/dusk.js";
 import Other from "./components/other/midnight.js";
+import References from "./components/credits.js";
 
 function App() {
     const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -26,10 +27,11 @@ function App() {
                 pagination={{clickable: true}} 
                 modules={[Mousewheel, Pagination, Navigation, HashNavigation]}
             >
-                <SwiperSlide data-hash="dawn"><Home darkMode={darkMode} /></SwiperSlide>
-                <SwiperSlide data-hash="noon"><About darkMode={darkMode} /></SwiperSlide>
-                <SwiperSlide data-hash="dusk"><Achievements /></SwiperSlide>
-                <SwiperSlide data-hash="midnight"><Other /></SwiperSlide>
+                <SwiperSlide data-hash="Adagio e Tranquillo"><Home darkMode={darkMode} /></SwiperSlide>
+                <SwiperSlide data-hash="Sostenuto"><About darkMode={darkMode} /></SwiperSlide>
+                <SwiperSlide data-hash="Accelerando e Crescendo"><Achievements /></SwiperSlide>
+                <SwiperSlide data-hash="Stringendo"><Other /></SwiperSlide>
+                <SwiperSlide data-hash="Con fuoco"><References /></SwiperSlide>
             </Swiper>
         </div>
     );

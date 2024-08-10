@@ -7,7 +7,7 @@ export default function Other() {
          <div className="other">
             <div className="left">
                 <div>
-                    <p className="title"><span className="highlight"><del>Fun</del></span> sad fact</p>
+                    <p className="title"><b><span className="highlight"><del>Fun</del></span> sad fact</b></p>
                     <br></br>
                     <p>When a coin is tossed,</p>
                     <p><span className="highlight">50%</span> of the time, it will land on heads,</p>
@@ -16,7 +16,6 @@ export default function Other() {
                     <br></br>
                     <p>That's why <span className="highlight">heads</span> is more commonly picked in a coin flip.</p>
                     <br></br>
-                    <p>(images and their artists <span className="highlight"><u>here</u></span>)</p>
                 </div>
             </div>
             <div className="right">

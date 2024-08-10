@@ -12,7 +12,7 @@ export default function About({ darkMode }) {
             </div>
             <div className="right">
                 <div>
-                    <p className="title">More <span className="highlight">about</span> me</p>
+                    <p className="title"><b>More <span className="highlight">about</span> me</b></p>
                     <br></br>
                     <p>My name is <span className="highlight">Job</span> and I'm <span className="highlight">78</span> years old.</p>
                     <p onClick={() => alert("Hey girl are you africa?\nBecause Djibouti is making me crazy.")}>I live in <span className="highlight">Djibouti City</span> located in <span className="highlight">Djibouti</span>.</p>
