@@ -26,7 +26,7 @@
   </head>
   <body>
     <noscript>You are seeing this because you either have javascript disabled (stinky) or you want to feel like a cool hacker by inspect elementing (even more stinky).</noscript>
-    <!-- <div class="preloader">
+    <div class="preloader">
       <div class="counter">
         <div class="counter-1 digit">
           <div class="num">0</div>
@@ -57,30 +57,13 @@
           <div class="num">9</div>
         </div>
       </div>
-    </div> -->
-    <div id="root"></div>
+    </div>
+    <div id="root" class="hidden"></div>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const counter3 = document.querySelector(".counter-3");
-
-        for (let i = 0; i < 2; i++) {
-          for (let j = 0; j < 10; j++) {
-            const div = document.createElement("div");
-            div.className = "num";
-            div.textContent = j;
-            counter3.appendChild(div);
-          }
-        }
-
-        const finalDiv = document.createElement("div");
-        finalDiv.className = "num";
-        finalDiv.textContent = "0";
-        counter3.appendChild(finalDiv);
-
         function animate(counter, duration, delay = 0) {
           const numHeight = counter.querySelector(".num").clientHeight;
           const totalDistance = (counter.querySelectorAll(".num").length - 1) * numHeight;
-
           gsap.to(counter, {
             y: -totalDistance,
             duration: duration,
@@ -88,11 +71,9 @@
             ease: "power2.inOut",
           });
         }
-
         animate(document.querySelector(".counter-3"), 5);
         animate(document.querySelector(".counter-2"), 6);
         animate(document.querySelector(".counter-1"), 2, 4);
-
         gsap.to(".digit", {
           top: "-150px",
           stagger: {
@@ -102,12 +83,17 @@
           duration: 1,
           ease: "power4.inOut",
         });
-
         gsap.to(".preloader", {
           opacity: 0,
           duration: 0.5,
           delay: 7.5,
           ease: "power1.inOut",
+
+          
+          onComplete: function () {
+            document.querySelector(".preloader").style.display = "none";
+            document.querySelector("#root").classList.remove("hidden");
+          },
         });
       });
     </script>

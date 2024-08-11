@@ -21,7 +21,7 @@ export default function Home({ darkMode }) {
                 <div>
                     <p>Greetings, dear <span className="highlight">guests</span>.</p>
                     <br></br>
-                    <p>You've <span className="highlight">returned</span>{isFirstVisit ? "?" : "."}</p>
+                    <p>{isFirstVisit ? "Welcome to my soul society." : "You've returned"}</p>
                     <p className="indent-text">I'm <span className="highlight">Lazine</span>(ss)</p>
                     <br></br>
                     <p>also known as . . .</p>
