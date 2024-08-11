@@ -9,19 +9,13 @@ export default function NavBar ({ setDarkMode, darkMode }) {
         <nav>
             <ul>
                 <li>
-                    <a href="/">
-                        <img src={Icon} className="icon" alt="Floor of philosophy icon" />
-                    </a>
+                    <a href="#dawn"><img src={Icon} className="icon" alt="Floor of philosophy icon" /></a>
                 </li>
                 <li>
-                    <a href="https://open.spotify.com/user/36n2d2ubsuni1jrat4kuxrk70" target="_blank" rel="noopener noreferrer" > 
-                        <SiSpotify  />
-                    </a>
+                    <a href="https://open.spotify.com/user/36n2d2ubsuni1jrat4kuxrk70" target="_blank" rel="noopener noreferrer" > <SiSpotify  /></a>
                 </li>
                 <li >
-                    <a href="https://steamcommunity.com/id/Floto/" target="_blank" rel="noopener noreferrer" > 
-                        <SiSteam  />
-                    </a>
+                    <a href="https://steamcommunity.com/id/Floto/" target="_blank" rel="noopener noreferrer" > <SiSteam  /></a>
                 </li>
                 <li>
                     <Toggle setDarkMode={setDarkMode} darkMode={darkMode} />
@@ -29,5 +23,5 @@ export default function NavBar ({ setDarkMode, darkMode }) {
             </ul>
         </nav>
     )
-  }
+}
   

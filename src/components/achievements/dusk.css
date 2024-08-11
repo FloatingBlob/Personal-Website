@@ -89,7 +89,8 @@
 
 @media (max-width: 768px) {
   .achievements {
-    width: 95%;
+    width: 85%;
+    transform: translateY(4%) translateX(-2.5%);
   }
 
   .layout {

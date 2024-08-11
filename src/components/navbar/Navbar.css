@@ -1,7 +1,7 @@
 nav {
   position: absolute;
   width: 100%;
-  z-index: 100;
+  z-index: 2;
 }
 
 nav ul {
@@ -13,7 +13,7 @@ nav ul {
 }
 
 nav li {
-  padding: 0 30px 0 0;
+  padding: 0 2vw 0 0;
 }
 
 nav a {
@@ -22,6 +22,10 @@ nav a {
 
 nav li:first-child {
   margin-right: auto;
+}
+
+nav li:last-child {
+  padding: 0 clamp(5px, 1vw, 25px) 0 0;
 }
 
 svg {
