@@ -13,6 +13,15 @@
   color: var(--text);
 }
 
+.hidden {
+  display: none;
+}
+
+.indent-text:hover .hidden,
+.indent-text.tap .hidden {
+  display: inline-block;
+}
+
 .home .right {
   display: flex;
   justify-content: center;

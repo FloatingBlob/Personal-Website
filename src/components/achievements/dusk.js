@@ -10,7 +10,6 @@ import thumbsup from"../../assets/thumbsup.png";
 export default function Achievements() {
     useEffect(() => {
         const cards = document.querySelectorAll(".box .card");
-        
         const tap = (event) => {
             event.currentTarget.classList.toggle("is-flipped");
         };

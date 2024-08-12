@@ -10,7 +10,7 @@
 
 .swiper-pagination {
   position: absolute;
-  right: clamp(5px, 1vw, 25px);
+  right: clamp(5px, 1.5vw, 25px);
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;

@@ -13,7 +13,26 @@ export default function Home({ darkMode }) {
             setIsFirstVisit(true);
             localStorage.setItem("hasVisited", "true");
         }
+
+        const indentText = document.querySelector(".indent-text");
+        const tap = () => {
+            indentText.classList.toggle("tap");
+        };
+
+        indentText.addEventListener("click", tap);
+
+        return () => {
+            indentText.removeEventListener("click", tap);
+        };
     }, []);
+
+    const SoulSociety = () => (
+        <p>Welcome to my <span className="highlight">soul society</span>.</p>
+    );
+
+    const Returned = () => (
+        <p>You've <span className="highlight">returned</span>.</p>
+    );
 
     return (
         <div className="home">
@@ -21,8 +40,8 @@ export default function Home({ darkMode }) {
                 <div>
                     <p>Greetings, dear <span className="highlight">guests</span>.</p>
                     <br></br>
-                    <p>{isFirstVisit ? "Welcome to my soul society." : "You've returned"}</p>
-                    <p className="indent-text">I'm <span className="highlight">Lazine</span>(ss)</p>
+                    {isFirstVisit ? <SoulSociety /> : <Returned />}
+                    <p className="indent-text">I'm <span className="highlight">Lazine</span><span className="hidden">ss</span></p>
                     <br></br>
                     <p>also known as . . .</p>
                     <div className="indent-text">

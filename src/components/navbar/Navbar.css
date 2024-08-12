@@ -25,7 +25,7 @@ nav li:first-child {
 }
 
 nav li:last-child {
-  padding: 0 clamp(5px, 1vw, 25px) 0 0;
+  padding: 0 clamp(5px, 1.5vw, 25px) 0 0;
 }
 
 svg {
