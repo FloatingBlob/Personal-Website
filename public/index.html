@@ -23,6 +23,13 @@
     <link rel="stylesheet" href="%PUBLIC_URL%/styles.css" />
     <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <style>
+      body,
+      html {
+        background: url('%PUBLIC_URL%/binah.png') no-repeat center fixed;
+        background-size: cover;
+      }
+    </style>
   </head>
   <body>
     <noscript>You are seeing this because you either have javascript disabled (stinky) or you want to feel like a cool hacker by inspect elementing (even more stinky).</noscript>
@@ -46,7 +53,7 @@
         </div>
         <div class="counter-3 digit">
           <div class="num">0</div>
-          <div class="num">1</div>
+          <div class="num num1offset3">1</div>
           <div class="num">2</div>
           <div class="num">3</div>
           <div class="num">4</div>
@@ -55,13 +62,26 @@
           <div class="num">7</div>
           <div class="num">8</div>
           <div class="num">9</div>
-          <div class="num">0</div>
         </div>
       </div>
     </div>
     <div id="root" class="hidden"></div>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        for (let i = 0; i < 2; i++) {
+          for (let j = 0; j < 10; j++) {
+            const div = document.createElement("div");
+            div.className = "num";
+            div.textContent = j;
+            document.querySelector(".counter-3").appendChild(div);
+          }
+        }
+
+        const finalDiv = document.createElement("div");
+        finalDiv.className = "num";
+        finalDiv.textContent = "0";
+        document.querySelector(".counter-3").appendChild(finalDiv);
+
         function animate(counter, duration, delay = 0) {
           const numHeight = counter.querySelector(".num").clientHeight;
           const totalDistance = (counter.querySelectorAll(".num").length - 1) * numHeight;

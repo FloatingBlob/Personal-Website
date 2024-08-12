@@ -9,7 +9,6 @@
 .other .left {
   display: flex;
   font-size: var(--content);
-  line-height: 100%;
   color: var(--text);
 }
 

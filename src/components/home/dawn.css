@@ -9,7 +9,6 @@
 .home .left {
   display: flex;
   font-size: var(--title);
-  line-height: 100%;
   color: var(--text);
 }
 

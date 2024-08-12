@@ -3,48 +3,47 @@ import "./midnight.css";
 import donttouchme from "../../assets/donttouchme.png";
 
 export default function Other() {
-    const letters = "abcdefghijklmnopqrstuvwxyz";
+    const letters = "ⱥƀȼđēӻꞡħīɉҟłᵯꞥꝋꝑꝗɍꞩⱦᵾꝟⱳӿɏƶ";
     const distortRef = useRef(null);
 
     useEffect(() => {
         let interval = null;
-        
-        const handleMouseOver = (event) => {
+
+        const distortText = (element) => {
             let iterations = 0;
+            const originalText = element.dataset.value;
 
             clearInterval(interval);
 
             interval = setInterval(() => {
-                event.target.innerText = event.target.innerText.split("")
-                    .map((letter, index) => {
-                        if (index < iterations) {
-                            return event.target.dataset.value[index];
-                        }
-                        
-                        return letters[Math.floor(Math.random() * 26)];
-                    }).join("");
+                element.innerText = originalText.split("").map((char, index) => {
+                    if (index < iterations) {
+                        return char;
+                    }
+                    return letters[Math.floor(Math.random() * letters.length)];
+                }).join("");
 
-                if (iterations >= event.target.dataset.value.length) {
+                if (iterations >= originalText.length) {
                     clearInterval(interval);
                 }
 
-                iterations += 1 / 3;
-            }, 30);
+                iterations += 2 / 5;
+            }, 50);
         };
 
-        const handleTap = event => {
+        const handleInteraction = (event) => {
             distortRef.current.classList.toggle("tap");
-            handleMouseOver(event);
+            distortText(event.target);
         };
 
         const distortElement = distortRef.current;
-        distortElement.addEventListener("mouseover", handleMouseOver);
-        distortElement.addEventListener("click", handleTap);
+        distortElement.addEventListener("mouseover", distortText.bind(null, distortElement));
+        distortElement.addEventListener("click", handleInteraction);
 
         return () => {
-            distortElement.removeEventListener("mouseover", handleMouseOver);
-            distortElement.removeEventListener("click", handleTap);
             clearInterval(interval);
+            distortElement.removeEventListener("mouseover", distortText.bind(null, distortElement));
+            distortElement.removeEventListener("click", handleInteraction);
         };
     }, []);
 
