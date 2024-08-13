@@ -21,18 +21,44 @@
     <meta name="twitter:description" content="definately not a virus (trust)" />
     <meta name="twitter:image" content="https://raw.githubusercontent.com/FloatingBlob/test-4/main/card%20shark%20cute.jpg" />
     <link rel="stylesheet" href="%PUBLIC_URL%/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <style>
-      body,
-      html {
-        background: url('%PUBLIC_URL%/binah.png') no-repeat center fixed;
-        background-size: cover;
+      * {
+        line-height: 100%;
+        font-family: "Montserrat", sans-serif;
+        background-color: #e6e6e6;
+        color: #191919;
+      }
+
+      .tea {
+        position: fixed;
+        left: 10vw;
+        bottom: 30vh;
+        width: clamp(350px, 95%, 517px);
+        height: auto;
+        z-index: 4;
+      }
+
+      @media (max-width: 1024px) {
+        .tea {
+          left: 5vw;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .tea {
+          left: 1vw;
+        }
       }
     </style>
   </head>
   <body>
     <noscript>You are seeing this because you either have javascript disabled (stinky) or you want to feel like a cool hacker by inspect elementing (even more stinky).</noscript>
+    <img class="tea" src="%PUBLIC_URL%/binah.png" />
     <div class="preloader">
       <div class="counter">
         <div class="counter-1 digit">
@@ -112,6 +138,7 @@
 
           onComplete: function () {
             document.querySelector(".preloader").style.display = "none";
+            document.querySelector("img").style.display = "none";
             document.querySelector("#root").classList.remove("hidden");
           },
         });

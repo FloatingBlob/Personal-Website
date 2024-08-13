@@ -7,8 +7,8 @@
 .counter {
   display: flex;
   position: fixed;
-  right: 100px;
-  bottom: 65px;
+  right: 5vw;
+  bottom: 3vw;
   height: 150px;
   font-size: 150px;
   clip-path: polygon(0 0, 100% 0, 100% 150px, 0 150px);
@@ -20,7 +20,6 @@
   position: relative;
   top: -15px;
   transition: none;
-  font-family: "sekiro";
 }
 
 .num1offset1 {
