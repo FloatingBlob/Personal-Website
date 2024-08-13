@@ -20,6 +20,7 @@
     <meta name="twitter:title" content="Lazine" />
     <meta name="twitter:description" content="definately not a virus (trust)" />
     <meta name="twitter:image" content="https://raw.githubusercontent.com/FloatingBlob/test-4/main/card%20shark%20cute.jpg" />
+
     <link rel="stylesheet" href="%PUBLIC_URL%/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,7 +45,6 @@
         bottom: 30vh;
         width: clamp(350px, 95%, 517px);
         height: auto;
-        z-index: 4;
       }
 
       @media (max-width: 1024px) {
@@ -62,8 +62,8 @@
   </head>
   <body>
     <noscript>You are seeing this because you either have javascript disabled (stinky) or you want to feel like a cool hacker by inspect elementing (even more stinky).</noscript>
-    <img class="tea" src="%PUBLIC_URL%/binah.png" />
     <div class="preloader">
+      <img class="tea" src="%PUBLIC_URL%/binah.png" />
       <div class="counter">
         <div class="counter-1 digit">
           <div class="num">0</div>
@@ -117,32 +117,32 @@
           const totalDistance = (counter.querySelectorAll(".num").length - 1) * numHeight;
           gsap.to(counter, {
             y: -totalDistance,
-            duration: duration,
             delay: delay,
+            duration: duration,
             ease: "power2.inOut",
           });
         }
-        animate(document.querySelector(".counter-3"), 5);
-        animate(document.querySelector(".counter-2"), 6);
-        animate(document.querySelector(".counter-1"), 2, 4);
+
+        animate(document.querySelector(".counter-1"), 2, 2.5);
+        animate(document.querySelector(".counter-2"), 4.5);
+        animate(document.querySelector(".counter-3"), 4);
+
         gsap.to(".digit", {
           top: "-150px",
-          stagger: {
-            amount: 0.25,
-          },
-          delay: 6,
-          duration: 1,
-          ease: "power4.inOut",
+          stagger: { amount: 0.5 },
+          delay: 4.5,
+          duration: 1.5,
+          ease: "expo.inOut",
         });
+
         gsap.to(".preloader", {
           opacity: 0,
+          delay: 6,
           duration: 0.5,
-          delay: 7.5,
-          ease: "power1.inOut",
+          ease: "sine.in",
 
           onComplete: function () {
-            document.querySelector(".preloader").style.display = "none";
-            document.querySelector("img").style.display = "none";
+            document.querySelector(".preloader").classList.add("hidden");
             document.querySelector("#root").classList.remove("hidden");
           },
         });

@@ -11,7 +11,7 @@
   bottom: 3vw;
   height: 150px;
   font-size: 150px;
-  clip-path: polygon(0 0, 100% 0, 100% 150px, 0 150px);
+  clip-path: polygon(0 0, 100% 0, 100% 125px, 0 125px);
 }
 
 .counter-1,
