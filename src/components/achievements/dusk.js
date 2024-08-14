@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./dusk.css";
 import steam from"../../assets/steam.png";
 import lunartear from"../../assets/lunartear.png";
@@ -6,24 +6,10 @@ import wordle from"../../assets/wordle.png";
 import idiot from"../../assets/idiot.png";
 import turnip from"../../assets/turnip.png";
 import thumbsup from"../../assets/thumbsup.png";
+import { useFlipCard } from "../../hooks/flip.js";
 
 export default function Achievements() {
-    useEffect(() => {
-        const cards = document.querySelectorAll(".box .card");
-        const tap = (event) => {
-            event.currentTarget.classList.toggle("is-flipped");
-        };
-
-        cards.forEach(card => {
-            card.addEventListener("click", tap);
-        });
-
-        return () => {
-            cards.forEach(card => {
-                card.removeEventListener("click", tap);
-            });
-        };
-    }, []);
+    useFlipCard();
 
     return(
         <div className="achievements">

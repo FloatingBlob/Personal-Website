@@ -1,30 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./dawn.css";
 import zena from"../../assets/zena.png";
 import nier from"../../assets/nier.png";
 import Type from "./type";
+import { useFirstVisit } from "../../hooks/visit.js";
+import { useIndentToggle } from "../../hooks/indent.js";
 
 export default function Home({ darkMode }) {
-    const [isFirstVisit, setIsFirstVisit] = useState(false);
-
-    useEffect(() => {
-        const hasVisited = localStorage.getItem("hasVisited");
-        if (!hasVisited) {
-            setIsFirstVisit(true);
-            localStorage.setItem("hasVisited", "true");
-        }
-
-        const indentText = document.querySelector(".indent-text");
-        const tap = () => {
-            indentText.classList.toggle("tap");
-        };
-
-        indentText.addEventListener("click", tap);
-
-        return () => {
-            indentText.removeEventListener("click", tap);
-        };
-    }, []);
+    const isFirstVisit = useFirstVisit();
+    useIndentToggle();
 
     const SoulSociety = () => (
         <p>Welcome to my <span className="highlight">soul society</span>.</p>
