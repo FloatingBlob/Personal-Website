@@ -23,10 +23,10 @@ export default function Home({ darkMode }) {
             <div className="left">
                 <div>
                     <p>Greetings, dear <span className="highlight">guests</span>.</p>
-                    <br></br>
+                    <br />
                     {isFirstVisit ? <SoulSociety /> : <Returned />}
                     <p className="indent-text">I'm <span className="highlight">Lazine</span><span className="hidden">ss</span></p>
-                    <br></br>
+                    <br />
                     <p>also known as . . .</p>
                     <div className="indent-text">
                         <span className="highlight"><Type /></span>
