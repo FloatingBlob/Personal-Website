@@ -19,14 +19,24 @@ const fonts = [
     "omori",
 ];
 
+let lastQuoteIndex = -1;
+
 function getRandomQuote() {
-    const randomNumber = Math.floor(Math.random() * 100) + 1;
-    if (randomNumber <= 19) return { quote: quotes[0], font: fonts[0] };
-    if (randomNumber <= 38) return { quote: quotes[1], font: fonts[1] };
-    if (randomNumber <= 57) return { quote: quotes[2], font: fonts[2] };
-    if (randomNumber <= 76) return { quote: quotes[3], font: fonts[3] };
-    if (randomNumber <= 95) return { quote: quotes[4], font: fonts[4] };
-    return { quote: quotes[5], font: fonts[5] };
+    let randomNumber;
+    let newQuoteIndex;
+
+    do {
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+        if (randomNumber <= 19) newQuoteIndex = 0;
+        else if (randomNumber <= 38) newQuoteIndex = 1;
+        else if (randomNumber <= 57) newQuoteIndex = 2;
+        else if (randomNumber <= 76) newQuoteIndex = 3;
+        else if (randomNumber <= 95) newQuoteIndex = 4;
+        else newQuoteIndex = 5;
+    } while (newQuoteIndex === lastQuoteIndex);
+
+    lastQuoteIndex = newQuoteIndex;
+    return { quote: quotes[newQuoteIndex], font: fonts[newQuoteIndex] };
 }
 
 export default function Quotes() {

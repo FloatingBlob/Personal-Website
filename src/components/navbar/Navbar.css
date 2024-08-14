@@ -44,3 +44,12 @@ svg {
   min-width: 100px;
   height: auto;
 }
+
+nav button {
+  border-radius: 100%;
+  border: none;
+  background-color: transparent;
+
+  display: flex;
+  place-items: center;
+}

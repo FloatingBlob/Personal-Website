@@ -1,8 +1,0 @@
-button {
-  border-radius: 100%;
-  border: none;
-  background-color: transparent;
-
-  display: flex;
-  place-items: center;
-}
