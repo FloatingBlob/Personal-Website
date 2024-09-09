@@ -28,9 +28,8 @@
   perspective: 500px;
 }
 
-.box:hover > .card,
 .card.is-flipped {
-  transform: rotateX(180deg) rotateZ(180deg);
+  transform: rotateX(180deg);
 }
 
 .card {
@@ -42,6 +41,7 @@
   transition: transform 1000ms;
   transform-style: preserve-3d;
   position: relative;
+  will-change: transform;
 }
 
 .front,
@@ -52,6 +52,10 @@
   align-items: center;
   position: absolute;
   backface-visibility: hidden;
+}
+
+.card .back {
+  transform: rotateX(180deg);
 }
 
 .front img {
@@ -73,7 +77,7 @@
     grid-template-columns: 1fr;
     transform: translateY(4%);
     width: 90%;
-    height: 90%;
+    height: 85%;
   }
 
   .layout {
@@ -90,7 +94,7 @@
 @media (max-width: 768px) {
   .achievements {
     width: 85%;
-    transform: translateY(4%) translateX(-2.5%);
+    transform: translateY(40px) translateX(-2.5%);
   }
 
   .layout {

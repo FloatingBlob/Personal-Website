@@ -2,7 +2,7 @@
   display: grid;
   width: 80%;
   height: 80%;
-  grid-template-columns: 58.5% 38.5% 3%;
+  grid-template-columns: 60% 40%;
   align-items: center;
 }
 
@@ -28,7 +28,7 @@
 
 .home-img {
   max-width: 500px;
-  min-width: 225px;
+  min-width: 200px;
 }
 
 @media (max-width: 768px) {
@@ -36,7 +36,8 @@
     width: 95%;
     height: 90%;
     grid-template-columns: 1fr;
-    transform: translateY(3%);
+    line-height: 50%;
+    transform: translateY(40px);
   }
 
   .home .left {
@@ -50,6 +51,6 @@
 
   .home-img {
     width: 45%;
-    min-width: 300px;
+    min-width: 250px;
   }
 }

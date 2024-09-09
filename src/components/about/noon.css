@@ -2,7 +2,7 @@
   display: grid;
   width: 80%;
   height: 80%;
-  grid-template-columns: 38.5% 58.5% 3%;
+  grid-template-columns: 40% 60%;
   align-items: center;
 }
 

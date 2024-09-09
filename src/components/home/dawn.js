@@ -21,7 +21,7 @@ export default function Home({ darkMode }) {
     return (
         <div className="home">
             <div className="left">
-                <div>
+                <div className="content">
                     <p>Greetings, dear <span className="highlight">guests</span>.</p>
                     <br />
                     {isFirstVisit ? <SoulSociety /> : <Returned />}
