@@ -9,3 +9,4 @@ To do list:
 - speedrun timer (no longer counts up)
 - djbouti voice over
 - look into creating horizontal some sort of indicator for mobile slides
+- take a look at how font sizing works when turned horizontally
