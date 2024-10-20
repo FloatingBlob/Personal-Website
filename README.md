@@ -2,6 +2,7 @@ random project
 looks pretty cool tho
 
 To do list:
+- preloading images
 - look into jumpscare when button (spinner, blood, screen cracking, screen shake, crash?)
 - look into animations e.g the text coming from the left and right
     - metallic rouge, cruella, that one up and down thing

@@ -1,55 +1,31 @@
 import React, { useState, useEffect } from 'react';
 
-// Function to preload images
-const preloadImages = (imagePaths) => {
-  return Promise.all(
-    imagePaths.map((path) => {
-      return new Promise((resolve, reject) => {
-        const img = new Image();
-        img.src = path;
-        img.onload = resolve;
-        img.onerror = reject;
-      });
-    })
-  );
-};
+const FrameByFrameAnimation = ({ type }) => {
+  const totalFrames = type === 'spinner' ? 101 : 85;
+  const frameInterval = 41; // Time between frames in milliseconds
 
-const FrameAnimation = ({ frames, frameRate }) => {
-  const [currentFrame, setCurrentFrame] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [currentFrame, setCurrentFrame] = useState(1);
 
   useEffect(() => {
-    // Preload all images
-    preloadImages(frames)
-      .then(() => {
-        setIsLoaded(true); // All images are loaded
-      })
-      .catch((error) => {
-        console.error("Error preloading images:", error);
+    const timer = setInterval(() => {
+      setCurrentFrame((prevFrame) => {
+        const nextFrame = prevFrame + 1;
+        return nextFrame > totalFrames ? 1 : nextFrame;
       });
-  }, [frames]);
+    }, frameInterval);
 
-  useEffect(() => {
-    if (!isLoaded) return;
+    return () => clearInterval(timer);
+  }, [totalFrames]);
 
-    const interval = setInterval(() => {
-      setCurrentFrame((prevFrame) => (prevFrame + 1) % frames.length);
-    }, 1000 / frameRate);
-
-    return () => clearInterval(interval); // Clean up on unmount
-  }, [frames.length, frameRate, isLoaded]);
-
-  if (!isLoaded) {
-    return <div>Loading...</div>; // Show a loading indicator while images are preloading
-  }
+  // Dynamically set the folder name based on the type (either 'blood' or 'spinner')
+  const folderName = type === 'spinner' ? 'spinner' : 'blood';
+  const imageUrl = `/button/${folderName}/frame${currentFrame.toString().padStart(3, '0')}.png`;
 
   return (
-    <img
-      src={frames[currentFrame]}
-      alt={`frame ${currentFrame}`}
-      style={{ width: '100%', height: 'auto' }}
-    />
+    <div>
+      <img src={imageUrl} alt={`${type} frame ${currentFrame}`} />
+    </div>
   );
 };
 
-export default FrameAnimation;
+export default FrameByFrameAnimation;

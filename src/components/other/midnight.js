@@ -1,9 +1,9 @@
 import React from "react";
 import "./midnight.css";
-import donttouchme from "../../assets/donttouchme.png";
 import { useDistortEffect } from "../../hooks/distortion.js";
 
 export default function Other() {
+    const donttouchme = "/assets/donttouchme.png";
     const distortRef = useDistortEffect();
 
     return (

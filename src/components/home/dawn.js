@@ -1,12 +1,13 @@
 import React from "react";
 import "./dawn.css";
-import zena from"../../assets/zena.png";
-import nier from"../../assets/nier.png";
 import Type from "./type";
 import { useFirstVisit } from "../../hooks/visit.js";
 import { useIndentToggle } from "../../hooks/indent.js";
 
 export default function Home({ darkMode }) {
+    const zena = "/assets/zena.png";
+    const nier = "/assets/nier.png";
+
     const isFirstVisit = useFirstVisit();
     useIndentToggle();
 

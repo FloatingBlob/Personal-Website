@@ -1,10 +1,11 @@
 import React from "react";
 import "./noon.css";
-import ihwa from"../../assets/ihwa.png";
-import bocchi from"../../assets/bocchizilla.png";
 import Quotes from "./quotes";
 
 export default function About({ darkMode }) {
+    const ihwa = "/assets/ihwa.png";
+    const bocchi = "/assets/bocchizilla.png";
+
     return(
         <div className="about">
             <div className="left">
@@ -23,7 +24,7 @@ export default function About({ darkMode }) {
                     <p className="indent-text">- King of <span className="highlight">Nothing</span></p>
                     <br />
                     <p>Favourite Quote:</p> 
-                    <p className="indent-text"><Quotes /></p>
+                    <div className="indent-text"><Quotes /></div>
                 </div>
             </div>
         </div> 

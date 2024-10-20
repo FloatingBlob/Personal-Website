@@ -1,14 +1,14 @@
 import React from "react";
 import "./dusk.css";
-import steam from"../../assets/steam.png";
-import lunartear from"../../assets/lunartear.png";
-import wordle from"../../assets/wordle.png";
-import idiot from"../../assets/idiot.png";
-import turnip from"../../assets/turnip.png";
-import thumbsup from"../../assets/thumbsup.png";
 import { useFlipCard } from "../../hooks/flip.js";
 
 export default function Achievements() {
+    const steam = "/assets/steam.png";
+    const lunartear = "/assets/lunartear.png";
+    const wordle = "/assets/wordle.png";
+    const idiot = "/assets/idiot.png";
+    const turnip = "/assets/turnip.png";
+    const thumbsup = "/assets/thumbsup.png";
     useFlipCard();
 
     return(

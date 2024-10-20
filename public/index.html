@@ -14,17 +14,16 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Lazine" />
     <meta property="og:description" content="definately not a virus (trust)" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/FloatingBlob/test-4/main/card%20shark%20cute.jpg" />
+    <meta property="og:image" content="%PUBLIC_URL%/calf.jpg" />
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Lazine" />
     <meta name="twitter:description" content="definately not a virus (trust)" />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/FloatingBlob/test-4/main/card%20shark%20cute.jpg" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/calf.jpg" />
 
     <link rel="stylesheet" href="%PUBLIC_URL%/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="preload" href="%PUBLIC_URL%/binah.png" as="image" />
     <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <style>
@@ -138,7 +137,7 @@
         gsap.to(".preloader", {
           opacity: 0,
           delay: 6,
-          duration: 0.5,
+          duration: 1,
           ease: "sine.in",
 
           onComplete: function () {
@@ -146,6 +145,45 @@
             document.querySelector("#root").classList.remove("hidden");
           },
         });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = [
+          "/assets/icon.png",
+          "/assets/zena.png",
+          "/assets/nier.png",
+          "/assets/ihwa.png",
+          "/assets/bocchizilla.png",
+          "/assets/steam.png",
+          "/assets/lunartear.png",
+          "/assets/wordle.png",
+          "/assets/idiot.png",
+          "/assets/turnip.png",
+          "/assets/thumbsup.png",
+          "/assets/donttouchme.png",
+        ];
+
+        let loadedImages = 0;
+
+        function preloadImages(index) {
+          if (index >= images.length) {
+            if (loadedImages === images.length) {
+              console.log("All images have been preloaded.");
+            }
+            return;
+          }
+          const img = new Image();
+          img.src = images[index];
+          img.onload = () => {
+            loadedImages++;
+            preloadImages(index + 1);
+          };
+          img.onerror = () => {
+            preloadImages(index + 1);
+          };
+        }
+        preloadImages(0);
       });
     </script>
   </body>
