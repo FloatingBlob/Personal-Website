@@ -16,7 +16,7 @@ export default function About({ darkMode }) {
                     <p className="title"><b>More <span className="highlight">about</span> me</b></p>
                     <br />
                     <p>My name is <span className="highlight">Job</span> and I'm <span className="highlight">78</span> years old.</p>
-                    <p onClick={() => alert("Hey girl are you africa?\nBecause Djibouti is making me crazy.")}>I live in <span className="highlight">Djibouti City</span> located in <span className="highlight">Djibouti</span>.</p>
+                    <p onClick={() => alert("Hey girl are you africa?\nBecause djibouti is making me crazy.")}>I live in <span className="highlight">Djibouti City</span> located in <span className="highlight">Djibouti</span>.</p>
                     <br />
                     <p>I like to think of myself as:</p>
                     <p className="indent-text">- <span className="highlight">#2</span> island royale player</p>

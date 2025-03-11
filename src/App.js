@@ -24,6 +24,7 @@ function App() {
                 mousewheel={true} 
                 hashNavigation={{watchState: true}}
                 pagination={{clickable: true}} 
+                speed={750}
                 modules={[Mousewheel, Pagination, Navigation, HashNavigation]}
             >
                 <SwiperSlide data-hash="dawn"><Home darkMode={darkMode} /></SwiperSlide>

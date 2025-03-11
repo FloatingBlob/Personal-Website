@@ -8,19 +8,20 @@
 
 .about .left {
   display: flex;
-  justify-content: start;
+  justify-content: center;
 }
 
+/* need to fix scaling of big images */
 .about-img {
   max-width: 500px;
   min-width: 225px;
 }
 
+/* unsure about what to do with the 5% scaling */
 .about .right {
   display: flex;
   justify-content: end;
   font-size: var(--content);
-  line-height: 100%;
   color: var(--text);
   padding-left: 5%;
 }
@@ -30,7 +31,6 @@
     width: 95%;
     height: 90%;
     grid-template-columns: 1fr;
-    transform: translateY(3%);
   }
 
   .about .left {

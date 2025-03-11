@@ -22,16 +22,15 @@ export default function Home({ darkMode }) {
     return (
         <div className="home">
             <div className="left">
-                <div className="content">
-                    <p>Greetings, dear <span className="highlight">guests</span>.</p>
+                <div>
+                    <p>Greetings, dear <span className="highlight">guest</span>.</p>
                     <br />
                     {isFirstVisit ? <SoulSociety /> : <Returned />}
-                    <p className="indent-text">I'm <span className="highlight">Lazine</span><span className="hidden">ss</span></p>
+                    {/* make nice fading when hover */}
+                    <p className="indent-text">I'm <span className="highlight">Lazi</span><span className="hidden">ness</span></p>
                     <br />
                     <p>also known as . . .</p>
-                    <div className="indent-text">
-                        <span className="highlight"><Type /></span>
-                    </div>
+                    <div className="indent-text"><span className="highlight"><Type /></span></div>
                 </div>
             </div>
             <div className="right">

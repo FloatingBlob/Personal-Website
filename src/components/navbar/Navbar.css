@@ -13,7 +13,7 @@ nav ul {
 }
 
 nav li {
-  padding: 0 clamp(10px, 3vw, 40px) 0 0;
+  padding: 0 clamp(10px, 1.5vw, 40px) 0 0;
 }
 
 nav a {
@@ -39,7 +39,7 @@ svg {
 }
 
 .icon {
-  width: 10vw;
+  width: 9vw;
   max-width: 200px;
   min-width: 100px;
   height: auto;

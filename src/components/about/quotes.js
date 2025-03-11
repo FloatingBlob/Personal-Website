@@ -6,8 +6,8 @@ const quotes = [
     "From break and ruin, the most beautiful performance begins.",
     "May your woes be many, and your days few.",
     "Hesitation is defeat.",
-    "May you find your book in this place.",
-    "YOU HAVE BEEN LIVING HERE FOR AS LONG AS YOU CAN REMEMBER . ."
+    "Be prepared; for today, a Star of the City shall be gone",
+    "I fucking love air-conditioning"
 ];
 
 const fonts = [
