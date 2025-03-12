@@ -30,15 +30,13 @@ export default function Home({ darkMode }) {
     return (
         <div className="home">
             <div className="left">
-                <div>
-                    <p>Greetings, dear <span className="highlight">guest</span>.</p>
-                    <br />
-                    {isFirstVisit ? <SoulSociety /> : <Returned />}
-                    {isFirstVisit ? <Call /> : <Know />}
-                    <br />
-                    <p>also known as . . .</p>
-                    <div className="indent-text"><span className="highlight"><Type /></span></div>
-                </div>
+                <p>Greetings, dear <span className="highlight">guest</span>.</p>
+                <br />
+                {isFirstVisit ? <SoulSociety /> : <Returned />}
+                {isFirstVisit ? <Call /> : <Know />}
+                <br />
+                <p>also known as . . .</p>
+                <div className="indent-text"><span className="highlight"><Type /></span></div>
             </div>
             <div className="right">
                 <img src={darkMode ? zena : nier} className="home-img" alt={darkMode ? "zena and claw" : "2b on boar"}/>

@@ -3,7 +3,7 @@ import "swiper/css";
 import "./App.css";
 import { useLocalStorage } from "react-use";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel, Pagination, Navigation, HashNavigation } from "swiper/modules";
+import { Mousewheel, Pagination, Navigation, History } from "swiper/modules";
 import NavBar from "./components/navbar/Navbar.js";
 import Home from "./components/home/dawn.js"
 import About from "./components/about/noon.js";
@@ -22,15 +22,15 @@ function App() {
                 direction={"vertical"} 
                 slidesPerView={1} 
                 mousewheel={true} 
-                hashNavigation={{watchState: true}}
+                history={{key: ""}}
                 pagination={{clickable: true}} 
                 speed={750}
-                modules={[Mousewheel, Pagination, Navigation, HashNavigation]}
+                modules={[Mousewheel, Pagination, Navigation, History]}
             >
-                <SwiperSlide data-hash="dawn"><Home darkMode={darkMode} /></SwiperSlide>
-                <SwiperSlide data-hash="noon"><About darkMode={darkMode} /></SwiperSlide>
-                <SwiperSlide data-hash="dusk"><Achievements /></SwiperSlide>
-                <SwiperSlide data-hash="midnight"><Other /></SwiperSlide>
+                <SwiperSlide data-history="dawn"><Home darkMode={darkMode} /></SwiperSlide>
+                <SwiperSlide data-history="noon"><About darkMode={darkMode} /></SwiperSlide>
+                <SwiperSlide data-history="dusk"><Achievements /></SwiperSlide>
+                <SwiperSlide data-history="midnight"><Other /></SwiperSlide>
             </Swiper>
         </div>
     );

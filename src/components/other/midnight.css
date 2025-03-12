@@ -7,7 +7,6 @@
 }
 
 .other .left {
-  display: flex;
   font-size: var(--content);
   color: var(--text);
 }

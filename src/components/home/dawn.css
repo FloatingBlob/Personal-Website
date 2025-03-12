@@ -7,7 +7,6 @@
 }
 
 .home .left {
-  display: flex;
   font-size: var(--title);
   color: var(--text);
 }

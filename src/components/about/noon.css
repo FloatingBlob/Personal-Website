@@ -19,8 +19,6 @@
 
 /* unsure about what to do with the 5% scaling */
 .about .right {
-  display: flex;
-  justify-content: end;
   font-size: var(--content);
   color: var(--text);
   padding-left: 5%;
