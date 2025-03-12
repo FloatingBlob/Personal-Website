@@ -1,9 +1,3 @@
-.preloader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-}
-
 .counter {
   display: flex;
   position: fixed;
@@ -31,8 +25,4 @@
 .num1offset3 {
   position: relative;
   right: -18px;
-}
-
-.hidden {
-  display: none;
 }

@@ -54,4 +54,8 @@
     width: 45%;
     min-width: 250px;
   }
+
+  .mask {
+    opacity: 1;
+  }
 }
