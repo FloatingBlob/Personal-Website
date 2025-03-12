@@ -26,10 +26,9 @@
   justify-content: center;
 }
 
-/* need to fix scaling of big images */
 .home-img {
   max-width: 500px;
-  min-width: 200px;
+  min-width: 225px;
 }
 
 @media (max-width: 768px) {
