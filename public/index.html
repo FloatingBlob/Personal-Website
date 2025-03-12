@@ -8,7 +8,7 @@
     <meta name="description" content="definately not a virus (trust)" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Lazine</title>
+    <title>Lazy</title>
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://test-4-pi.vercel.app/" />
     <meta property="og:type" content="website" />
@@ -34,8 +34,13 @@
       body,
       html {
         font-family: "Montserrat", sans-serif;
-        background-color: #e6e6e6;
         color: #191919;
+        background-color: #e6e6e6;
+      }
+
+      .preloader {
+        position: fixed;
+        background-color: #e6e6e6;
       }
 
       .tea {
@@ -150,40 +155,36 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const images = [
-          "/assets/icon.png",
-          "/assets/zena.png",
-          "/assets/nier.png",
-          "/assets/ihwa.png",
-          "/assets/bocchizilla.png",
-          "/assets/steam.png",
-          "/assets/lunartear.png",
-          "/assets/wordle.png",
-          "/assets/idiot.png",
-          "/assets/turnip.png",
-          "/assets/thumbsup.png",
-          "/assets/donttouchme.png",
+          "%PUBLIC_URL%/assets/icon.png",
+          "%PUBLIC_URL%/assets/zena.png",
+          "%PUBLIC_URL%/assets/nier.png",
+          "%PUBLIC_URL%/assets/ihwa.png",
+          "%PUBLIC_URL%/assets/bocchizilla.png",
+          "%PUBLIC_URL%/assets/steam.png",
+          "%PUBLIC_URL%/assets/lunartear.png",
+          "%PUBLIC_URL%/assets/wordle.png",
+          "%PUBLIC_URL%/assets/idiot.png",
+          "%PUBLIC_URL%/assets/turnip.png",
+          "%PUBLIC_URL%/assets/thumbsup.png",
+          "%PUBLIC_URL%/assets/donttouchme.png",
         ];
 
-        let loadedImages = 0;
-
-        function preloadImages(index) {
-          if (index >= images.length) {
-            if (loadedImages === images.length) {
-              console.log("All images have been preloaded.");
-            }
-            return;
-          }
-          const img = new Image();
-          img.src = images[index];
-          img.onload = () => {
-            loadedImages++;
-            preloadImages(index + 1);
-          };
-          img.onerror = () => {
-            preloadImages(index + 1);
-          };
-        }
-        preloadImages(0);
+        Promise.all(
+          images.map(
+            (url) =>
+              new Promise((resolve) => {
+                const img = new Image();
+                img.src = url;
+                img.onload = resolve;
+                img.onerror = () => {
+                  console.error("Failed to load:", url);
+                  resolve();
+                };
+              })
+          )
+        ).finally(() => {
+          console.log("Image preloading completed");
+        });
       });
     </script>
   </body>
