@@ -12,13 +12,14 @@
   color: var(--text);
 }
 
-.hidden {
-  display: none;
+.mask {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
 }
 
-.indent-text:hover .hidden,
-.indent-text.tap .hidden {
-  display: inline-block;
+.indent-text:hover .mask,
+.indent-text.tap .mask {
+  opacity: 1;
 }
 
 .home .right {
