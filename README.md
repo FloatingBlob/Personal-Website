@@ -2,7 +2,6 @@ personal website
 looks pretty cool tho
 
 To do list (in order):
-- sizing fixes
 - look into creating horizontal some sort of indicator for mobile slides
 
 - penis eek music (mutable)
