@@ -2,7 +2,8 @@
   display: grid;
   width: 80%;
   height: 80%;
-  transform: translateX(-2%);
+  transform: translateX(-2%) translateY(4%);
+
 }
 
 .achievements .layout {
@@ -85,7 +86,6 @@
 
 @media (max-width: 1024px) {
   .achievements {
-    transform: translateY(3%);
     width: 70%;
     height: 87.5%;
   }
