@@ -8,17 +8,8 @@
 
 .home .left {
   font-size: var(--title);
+  line-height: var(--line-height-title);
   color: var(--text);
-}
-
-.mask {
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
-
-.indent-text:hover .mask,
-.indent-text.tap .mask {
-  opacity: 1;
 }
 
 .home .right {
@@ -31,13 +22,19 @@
   min-width: 225px;
 }
 
+@media (max-width: 1024px) {
+  .home {
+    width: 85%;
+    grid-template-columns: 67.5% 32.5%;
+    transform: translateY(2%);
+  }
+}
+
 @media (max-width: 768px) {
   .home {
     width: 95%;
     height: 90%;
     grid-template-columns: 1fr;
-    line-height: 50%;
-    transform: translateY(40px);
   }
 
   .home .left {
@@ -52,9 +49,5 @@
   .home-img {
     width: 45%;
     min-width: 250px;
-  }
-
-  .mask {
-    opacity: 1;
   }
 }

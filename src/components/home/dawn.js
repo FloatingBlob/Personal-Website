@@ -14,28 +14,19 @@ export default function Home({ darkMode }) {
     const SoulSociety = () => (
         <p>Welcome to my <span className="highlight">soul society</span>.</p>
     );
-
     const Returned = () => (
-        <p>You've <span className="highlight">returned</span>.</p>
-    );
-
-    const Call = () => (
-        <p className="indent-text">You can call me <span className="highlight">Lazi</span><div className="mask">ness</div></p>
-    );
-
-    const Know = () => (
-        <div className="indent-text">You know me as <span className="highlight">Lazi</span><span className="mask">ness</span></div>
+        <p className="indent-text">You've <span className="highlight">returned</span>.</p>
     );
 
     return (
         <div className="home">
             <div className="left">
                 <p>Greetings, dear <span className="highlight">guest</span>.</p>
-                <br />
                 {isFirstVisit ? <SoulSociety /> : <Returned />}
-                {isFirstVisit ? <Call /> : <Know />}
                 <br />
-                <p>also known as . . .</p>
+                <p>You can call me <span className="highlight">Lazi</span>.</p>
+                <br />
+                <p>Known as . . .</p>
                 <div className="indent-text"><span className="highlight"><Type /></span></div>
             </div>
             <div className="right">

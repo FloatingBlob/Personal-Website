@@ -11,16 +11,25 @@
   justify-content: center;
 }
 
+/* unsure about what to do with the 5% scaling */
+.about .right {
+  font-size: var(--content);
+  line-height: var(--line-height-content);
+  color: var(--text);
+  padding-left: 5%;
+}
+
 .about-img {
   max-width: 500px;
   min-width: 225px;
 }
 
-/* unsure about what to do with the 5% scaling */
-.about .right {
-  font-size: var(--content);
-  color: var(--text);
-  padding-left: 5%;
+@media (max-width: 1024px) {
+  .about {
+    width: 85%;
+    grid-template-columns: 32.5% 67.5%;
+    transform: translateY(2%);
+  }
 }
 
 @media (max-width: 768px) {

@@ -12,7 +12,7 @@ export default function About({ darkMode }) {
                 <img src={darkMode ? ihwa : bocchi} className="about-img" alt={darkMode ? "ihwa" : "bocchizilla"}/>
             </div>
             <div className="right">
-                <p className="title"><b>More <span className="highlight">about</span> me</b></p>
+                <p className="title"><i>More <span className="highlight">about</span> me</i></p>
                 <br />
                 <p>My name is <span className="highlight">Job</span> and I'm <span className="highlight">78</span> years old.</p>
                 <p onClick={() => alert("Hey girl are you africa?\nBecause djibouti is making me crazy.")}>I live in <span className="highlight">Djibouti City</span> located in <span className="highlight">Djibouti</span>.</p>
