@@ -20,6 +20,7 @@
 }
 
 .about-img {
+  width: 85%;
   max-width: 500px;
   min-width: 225px;
 }
@@ -29,6 +30,10 @@
     width: 85%;
     grid-template-columns: 32.5% 67.5%;
     transform: translateY(2%);
+  }
+
+  .about-img {
+    width: 100%;
   }
 }
 

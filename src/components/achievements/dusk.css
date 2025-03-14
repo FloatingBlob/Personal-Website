@@ -3,7 +3,6 @@
   width: 80%;
   height: 80%;
   transform: translateX(-2%) translateY(4%);
-
 }
 
 .achievements .layout {
@@ -73,14 +72,15 @@
 .front img,
 .back {
   width: 95%;
-  max-height: 100%;
+  max-height: 95%;
   border-radius: var(--border);
 }
 
 @media (max-width: 1440px) {
   .achievements {
-    width: 85%;
-    height: 67.5%;
+    width: 70%;
+    height: 75%;
+    transform: translateY(7.5%);
   }
 }
 
@@ -88,6 +88,7 @@
   .achievements {
     width: 70%;
     height: 87.5%;
+    transform: translateY(2%);
   }
 
   .achievements .layout {
