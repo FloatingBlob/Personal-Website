@@ -41,3 +41,13 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 480px) {
+  .other {
+    transform: translateY(7.5%);
+  }
+
+  .other .right img {
+    width: 50%;
+  }
+}

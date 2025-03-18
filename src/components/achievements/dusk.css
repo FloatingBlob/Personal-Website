@@ -158,6 +158,7 @@
 @media (max-width: 480px) {
   .achievements {
     width: 80%;
-    height: 70%;
+    height: 75%;
+    transform: translateY(7.5%);
   }
 }

@@ -53,6 +53,15 @@
 
   .home-img {
     width: 45%;
-    min-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    transform: translateY(7.5%);
+  }
+
+  .home .left {
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
   }
 }
